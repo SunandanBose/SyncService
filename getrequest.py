@@ -11,5 +11,10 @@ accounts = [
 def getaccounts():
     return jsonify(accounts)
 
+@app.route("/accounts/<id>", methods=["GET"])
+def getaccountsById(id):
+    id = int(id) -1
+    return jsonify(accounts[id])
+
 if(__name__ == '__main__'):
     app.run(port=8081)
