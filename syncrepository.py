@@ -1,0 +1,2 @@
+def getDestinationServer(sourceserver):
+    return []
